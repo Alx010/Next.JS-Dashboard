@@ -1,4 +1,5 @@
 import { config } from "dotenv";
+import helmet from "helmet";
 import express, { Express } from "express";
 import routes from '../routes';
 import cors from 'cors';
@@ -12,6 +13,7 @@ export function createApp(): Express {
     app.use(express.json());
     app.use(express.urlencoded());
     app.use(cors({ origin: ['https://localhost:3000'], credentials: true }));
+    app.use(helmet());
     app.use(session({secret: 'AKJKDBSDHASBDASDKASJDADJANSD', resave: false, saveUninitialized: false, cookie: { maxAge: 604800000, secure: true },}));
     app.use(passport.initialize());
     app.use(passport.session());
