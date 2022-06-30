@@ -22,7 +22,7 @@
     "express-session": "^1.17.2",
     "helmet": "^5.0.2",
     "mongoose": "^6.2.7",
-    "passport": "^0.5.2",
+    "passport": "^0.6.0",
     "passport-discord": "^0.1.4"
   },
   "scripts": {
